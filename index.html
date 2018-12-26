@@ -40,7 +40,7 @@
   <div class="banner">
     <div class="mask"></div>
   </div>
-  <main>
+  <main style="margin-top: -340px;">
     <div class="userCard">
       <div class="pictureAndText clearfix">
         <div class="picture">
@@ -81,40 +81,69 @@
           </svg></a>
       </footer>
     </div>
-
-    <a class="button" href="#">下载 PDF 简历</a>
-
-    <p>
-      方应杭， 资深前端工程师，资深前端讲师，现在在 饥人谷 教前端课程。<br>
+    <p class="downloadResume-wrapper">
+    <a class="downloadResume" href="#" target="_blank" download>下载 PDF 简历</a>
+    </p>
+    <p class="selfIntroduction">
+      杨舒渝，前端实习工程师，现在在 饥人谷 学习前端课程。<br>
       技能：前端开发，Rails 开发，Node.js 开发
     </p>
 
   </main>
-  <section>
+  <section class="skills">
     <h2>技能</h2>
-    <ol>
-      <li>HTML 5 &amp; CSS 3</li>
-      <li>JavaScript</li>
-      <li>jQuery</li>
-      <li>Vue</li>
-      <li>React</li>
-      <li>HTTP</li>
+    <ol class="clearfix">
+      <li>HTML 5 &amp; CSS 3
+      <div class="progressBar">
+        <div class="progress" style="width:60%"></div>
+      </div></li>
+      <li>JavaScript<div class="progressBar">
+          <div class="progress" style="width:50%"></div></li>
+      
+      <li>jQuery<div class="progressBar">
+          <div class="progress" style="width:40%"></div></li>
+      <li>Vue<div class="progressBar">
+          <div class="progress" style="width:30%"></div></li>
+      <li>React<div class="progressBar">
+          <div class="progress" style="width:20%"></div></li>
+      <li>HTTP<div class="progressBar">
+          <div class="progress" style="width:10%"></div></li>
     </ol>
   </section>
-  <section>
+  <section class="portfolio">
     <h2>作品集</h2>
     <nav>
-      <ol>
-        <li>所有</li>
-        <li>框架</li>
-        <li>原生JS&amp;CSS</li>
+      <ol class="clearfix">
+        <li id="portfolio1">所有</li>
+        <li id="portfolio2">框架</li>
+        <li id="portfolio3">原生JS&amp;CSS</li>
       </ol>
+      <div id="portfolioBar"  class="bar state-1">
+        <div class="bar-inner"></div>
+      </div>
     </nav>
-
-    <div class="jobs">
-      <div class="big"></div>
-      <div class="small"></div>
-      <div class="small"></div>
+    <script>
+      portfolio1.onclick=function(){
+        portfolioBar.className = 'bar state-1'
+      }
+      portfolio2.onclick=function(){
+        portfolioBar.className = 'bar state-2'
+      }
+      portfolio3.onclick=function(){
+        portfolioBar.className = 'bar state-3'
+      }
+      
+    </script>
+    <div class="works" style="height:575px;">
+      <div class="big" style="top:0;left:0">
+        <img src="/images/001.jpg" alt="作品1">
+      </div>
+      <div class="small" style="top:0;left:634px">
+        <img src="/images/002.jpg" alt="作品2">
+      </div>
+      <div class="small" style="top:297px;left:634px" >
+        <img src="/images/003.jpg" alt="作品3">
+      </div>
     </div>
 
   </section>
