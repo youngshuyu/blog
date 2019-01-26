@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <script src="//at.alicdn.com/t/font_984501_kdrc2e59nu.js"></script>
-<style type="text/css">
+<style type="text/css/JavaScript">
   .icon {
     width: 1em;
     height: 1em;
@@ -9,15 +9,31 @@
     fill: currentColor;
     overflow: hidden;
   }
+  .site-welcome{
+    display: flex;
+    position: fixed;
+    top: 0;left: 0;width: 100%;height: 100%;
+    background: #888;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  .site-welcome.active{
+    display: flex;
+  }
 </style>
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>杨舒渝的个人简历</title>
-  <link rel="stylesheet" href="./d.css">
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./loading.css">
 </head>
 
 <body>
+  <div id="siteWelcome" class="site-welcome active">
+    <div class="loading"></div>
+  </div>
   <div class="topNavBar">
     <div class="topNavBar-inner clearfix">
       <a class="logo" href="#" alt="logo" style="float: left; ">
@@ -147,6 +163,9 @@
     </div>
 
   </section>
+  <script>
+      siteWelcome.classList.remove('active')
+  </script>
 </body>
 
 </html>
